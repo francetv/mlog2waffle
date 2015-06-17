@@ -11,20 +11,19 @@ class mlog2waffle (
 
 ){
 
-if !defined(Package[$lib3]){ 
+if ! defined(Package[$lib3]){ 
  package { $lib3:
     ensure => present,
     before   => File[$config_file],
  }
 }
-
-if !defined(Package[$lib2]){
+if ! defined(Package[$lib2]){
  package { $lib2:
     ensure => present,
     before   => File[$config_file],
  }
 }
-if !defined(Package[$lib1]){
+if ! defined(Package[$lib1]){
  package { $lib1:
     ensure => present,
     before   => File[$config_file],

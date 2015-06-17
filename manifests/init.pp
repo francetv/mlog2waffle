@@ -10,20 +10,26 @@ class mlog2waffle (
  $init_file         = '/etc/init.d/mlog2waffle',
 
 ){
- 
+
+if !definded(Package[$lib3]){ 
  package { $lib3:
     ensure => present,
     before   => File[$config_file],
  }
+}
+
+if !definded(Package[$lib2]){
  package { $lib2:
     ensure => present,
     before   => File[$config_file],
  }
+}
+if !definded(Package[$lib1]){
  package { $lib1:
     ensure => present,
     before   => File[$config_file],
  }
-
+}
   file { "/usr/local/mlog2waffle":
     ensure          => directory,
     owner           => 'root',

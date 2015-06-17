@@ -11,16 +11,6 @@ class mlog2waffle (
 
 ){
  
- $fle_address           = $mlog2waffle::params::fle_address,
- $fle_sensor            = $mlog2waffle::params::fle_sensor,
- $fle_password          = $mlog2waffle::params::fle_password,
- $lib1              = 'libwww-perl',
- $lib2              = 'libfile-pid-perl',
- $lib3              = 'libfile-tail-perl',
- $config_file        = '/etc/mlog2waffle.conf'
- $bin_file           = '/usr/local/mlog2waffle/mlog2waffle'
- $init_file         = '/etc/init.d/mlog2waffle'
-
  package { $lib3:
     ensure => present,
     before   => File[$config_file],

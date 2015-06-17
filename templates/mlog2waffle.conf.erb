@@ -16,13 +16,13 @@
 
 
 # Define the complete URI of WAF-FLE controller, http or https
-$CONSOLE_URI = "<%= @address %>";
+$CONSOLE_URI = "<%= @fle_address %>";
 
 # Define username used to put events on WAF-FLE for this sensor
-$CONSOLE_USERNAME =  "<%= @sensor %>";
+$CONSOLE_USERNAME =  "<%= @fle_sensor %>";
 
 # Define password used to put events on WAF-FLE for this sensor
-$CONSOLE_PASSWORD = "<%= @password %>";
+$CONSOLE_PASSWORD = "<%= @fle_password %>";
 
 # $MODSEC_DIRECTORY is where the concurrent audit logs are stored. 
 # In modsecurity configuration is defined by SecAuditLogStorageDir directive

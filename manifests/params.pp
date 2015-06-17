@@ -1,8 +1,8 @@
 class mlog2waffle::params {
 
- $address           = undef
- $sensor            = undef
- $password          = undef
+ $fle_address           = undef
+ $fle_sensor            = undef
+ $fle_password          = undef
  $service_name      = 'mlog2waffle'
 
 }

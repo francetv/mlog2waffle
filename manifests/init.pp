@@ -1,9 +1,9 @@
 class mlog2waffle (
 ) inherits mlog2waffle::params {
  
- $address           = $mlog2waffle::params::address,
- $sensor            = $mlog2waffle::params::sensor,
- $password          = $mlog2waffle::params::password,
+ $fle_address           = $mlog2waffle::params::fle_address,
+ $fle_sensor            = $mlog2waffle::params::fle_sensor,
+ $fle_password          = $mlog2waffle::params::fle_password,
  $lib1              = 'libwww-perl',
  $lib2              = 'libfile-pid-perl',
  $lib3              = 'libfile-tail-perl',

@@ -42,7 +42,7 @@ class mlog2waffle (
     content => template('mlog2waffle/mlog2waffle.service.erb'),
     owner   => 'root',
     group   => 'root',
-    mode    => '0444',
+    mode    => '0755',
     notify  => Service['mlog2waffle'],
   }
   file { $config_file:
@@ -50,13 +50,6 @@ class mlog2waffle (
     owner   => 'root',
     group   => 'root',
     mode    => '0444',
-    notify  => Service['mlog2waffle'],
-  }
-  file { '/etc/init.d/mlog2waffle':
-    source  => $init_script,
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0755',
     notify  => Service['mlog2waffle'],
   }
   service { 'mlog2waffle':

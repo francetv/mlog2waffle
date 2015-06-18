@@ -135,7 +135,6 @@ sub send_event
          # remove event file
          my $timestamp = strftime('[%d/%b/%Y %H:%M:%S %z]',localtime); 
          if (unlink $file_name) {
-            print "$file_name \n";
             $logLine = "$timestamp Event $summary sent to console with status, file deleted\n";
             $logQueue->enqueue($logLine);
          } else {

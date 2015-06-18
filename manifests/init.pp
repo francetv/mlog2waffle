@@ -1,7 +1,8 @@
 class mlog2waffle (
- $fle_address           = undef,
- $fle_sensor            = undef,
- $fle_password          = undef,
+ $fle_address       = undef,
+ $fle_sensor        = undef,
+ $fle_password      = undef,
+ $fle_log           = undef,
  $lib1              = 'libwww-perl',
  $lib2              = 'libfile-pid-perl',
  $lib3              = 'libfile-tail-perl',
@@ -40,7 +41,7 @@ if ! defined(Package[$lib1]){
     content => template('mlog2waffle/mlog2waffle.erb'),
     owner   => 'root',
     group   => 'root',
-    mode    => '0444',
+    mode    => '0755',
     notify  => Service['mlog2waffle'],
   }
   file { $init_file:
